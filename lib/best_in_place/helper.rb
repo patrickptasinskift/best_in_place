@@ -53,6 +53,11 @@ module BestInPlace
       options[:data]['bip-confirm'] = opts[:confirm].presence
       options[:data]['bip-value'] = html_escape(value).presence
 
+      options[:data]['bip-warning-before-save'] =
+        opts[:warning_before_save].presence
+      options[:data]['bip-warning-before-save-with-new-values'] =
+        opts[:warning_before_save_with_new_values].presence
+
       if opts[:raw]
         options[:data]['bip-raw'] = 'true'
       end
